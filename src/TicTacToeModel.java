@@ -143,7 +143,6 @@ public class TicTacToeModel {
         grid[x][y] = turn? 'X' : 'O';
         marks++;
         updateStatus();
-        System.out.println(status);
         for(TicTacToeView view: views){
             view.handleTicTacToeStatusUpdate(new TicTacToeEvent(this, status, x, y));
         }
