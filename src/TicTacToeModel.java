@@ -51,8 +51,8 @@ public class TicTacToeModel {
         //find horizontal line win
         for(int column = 0; column < TicTacToeModel.SIZE; column++){
             char first = this.grid[0][column];
-            win = true;
             if(first != ' '){
+                win = true;
                 for(int row = 1; row < TicTacToeModel.SIZE; row++){
                     if(first != this.grid[row][column]){
                         win = false;
@@ -107,7 +107,6 @@ public class TicTacToeModel {
                     this.status = Status.O_WON;
                 }
             }
-
         }
 
         //right to left diagonal
@@ -129,6 +128,7 @@ public class TicTacToeModel {
             }
 
         }
+        //tie scenario
         if (marks == TicTacToeModel.SIZE *  TicTacToeModel.SIZE ){
             this.status = Status.TIE;
         }
