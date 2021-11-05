@@ -51,13 +51,11 @@ public class TicTacToeModel {
         //find horizontal line win
         for(int column = 0; column < TicTacToeModel.SIZE; column++){
             char first = this.grid[0][column];
+            win = true;
             if(first != ' '){
                 for(int row = 1; row < TicTacToeModel.SIZE; row++){
                     if(first != this.grid[row][column]){
                         win = false;
-                    }
-                    else {
-                        win = true;
                     }
                 }
                 if (win){
@@ -71,7 +69,7 @@ public class TicTacToeModel {
             }
         }
 
-        //find horizontal line win
+        //find vertical line win
         for(int row = 0; row < TicTacToeModel.SIZE; row++){
             char first = this.grid[row][0];
             if(first != ' '){

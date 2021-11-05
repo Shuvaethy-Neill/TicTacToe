@@ -53,7 +53,7 @@ public class TicTacToeFrame extends JFrame  implements TicTacToeView{
             else{
                 result = "You both have tied.";
             }
-            JOptionPane.showMessageDialog(this, "Game over! " + result + " Game will now close.");
+            JOptionPane.showMessageDialog(this, "Game over! " + result);
             setVisible(false);
             dispose();
             System.exit(0);
